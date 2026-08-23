@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Absensi Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Absensi Siswa</h1>
+            <p>Sistem Pencatatan Kehadiran Harian</p>
+        </header>
+
+        <section class="card">
+            <h2>Formulir Absensi</h2>
+            <form id="attendanceForm">
+                <div class="form-group">
+                    <label for="studentName">Nama Siswa</label>
+                    <input type="text" id="studentName" placeholder="Masukkan nama siswa" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentClass">Kelas</label>
+                    <select id="studentClass" required>
+                        <option value="">-- Pilih Kelas --</option>
+                        <option value="X IPA">X IPA</option>
+                        <option value="XI IPA">XI IPA</option>
+                        <option value="XII IPA">XII IPA</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="attendanceStatus">Keterangan</label>
+                    <select id="attendanceStatus" required>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Izin">Izin</option>
+                        <option value="Sakit">Sakit</option>
+                        <option value="Alpha">Alpha</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Simpan Absensi</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Rekap Kehadiran</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceTableBody">
+                        <!-- Data akan dimasukkan secara dinamis lewat JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
